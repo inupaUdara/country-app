@@ -82,23 +82,16 @@ const Header = () => {
           
           {user ? (
             <div className="flex items-center space-x-4">
-              <span
-                className={`hidden sm:inline-flex items-center px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
-                  scrolled
-                    ? "bg-gray-800 text-teal-400 border border-gray-700"
-                    : "bg-gray-800/30 text-white backdrop-blur-sm"
-                }`}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 mr-2"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                </svg>
-                {user.name}
-              </span>
+              <Link
+            to="/profile"
+            className={`hidden md:inline-flex items-center px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
+              scrolled
+                ? "text-teal-400 hover:text-white"
+                : "text-teal-200 hover:text-white"
+            }`}
+          >
+            {user.name}
+          </Link>
               <button
                 onClick={logout}
                 className={`flex items-center px-5 py-2.5 rounded-full transition-all duration-300 shadow-md font-medium ${

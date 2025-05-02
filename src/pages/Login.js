@@ -19,6 +19,10 @@ const Login = () => {
 
   useEffect(() => {
     // Add a small delay for animation purposes
+    window.scrollTo({
+      top: 10,
+      behavior: "smooth",
+    })
     const timer = setTimeout(() => {
       setIsLoaded(true)
     }, 100)

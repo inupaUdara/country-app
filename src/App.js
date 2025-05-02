@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Header from './components/Header';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
+import AboutPage from './pages/About';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
               <Route path="/country/:countryCode" element={<CountryPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/about" element={<AboutPage />} />
               <Route path='/profile' element={<Profile />} />
               <Route path="*" element={<div>404 Not Found</div>} />
             </Routes>
