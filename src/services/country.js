@@ -17,7 +17,7 @@ const handleApiError = (error) => {
 
 export const getCountries = async () => {
   try {
-    const response = await axios.get(`${API_BASE_URL}/all?fields=name,capital`);
+    const response = await axios.get(`${API_BASE_URL}/all?fields=name`);
     return response.data;
   } catch (error) {
     handleApiError(error);
